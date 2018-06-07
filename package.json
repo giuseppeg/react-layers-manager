@@ -1,0 +1,36 @@
+{
+  "name": "react-layers-manager",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "description": "Manage layers and z-index in React applications effectively",
+  "keywords": [
+    "react",
+    "z-index",
+    "zIndex",
+    "layers",
+    "modal",
+    "tooltip"
+  ],
+  "author": "Giuseppe Gurgone",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "rollup": "^0.60.1",
+    "rollup-plugin-babel": "^3.0.4"
+  },
+  "peerDependencies": {
+    "react": ">= 16.3.x"
+  },
+  "scripts": {
+    "prepublish": "rollup -c"
+  }
+}
