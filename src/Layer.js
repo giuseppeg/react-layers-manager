@@ -28,7 +28,7 @@ class LayerImpl extends React.Component {
     const { container } = this.state
     const { root, host, onUnmount } = this.props
     root && onUnmount && onUnmount(root)
-    host && host.removeChild(container)
+    host && container && host.removeChild(container)
   }
   render() {
     const { container } = this.state
