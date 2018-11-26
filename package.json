@@ -1,6 +1,7 @@
 {
   "name": "react-layers-manager",
   "version": "0.1.0",
+  "repository": "giuseppeg/react-layers-manager",
   "main": "./index.js",
   "files": [
     "index.js",
