@@ -4,16 +4,23 @@ import { Provider } from "./context"
 export default class LayersManager extends React.Component {
   root = React.createRef()
   host = React.createRef()
+  state = {
+    root: this.root.current,
+    host: this.host.current,
+  }
   componentDidMount() {
-    this.forceUpdate()
+    this.setState({
+      root: this.root.current,
+      host: this.host.current,
+    })
   }
   render() {
     return (
-      <Provider value={{ root: this.root.current, host: this.host.current }}>
-        <div ref={this.root} style={{ isolation: "isolate" }}>
+      <Provider value={this.state}>
+        <div ref={this.root} style={{ opacity: 0.9999999 }}>
           {this.props.children}
         </div>
-        <div ref={this.host} style={{ isolation: "isolate" }} />
+        <div ref={this.host} style={{ opacity: 0.9999999 }} />
       </Provider>
     )
   }

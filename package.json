@@ -2,7 +2,8 @@
   "name": "react-layers-manager",
   "version": "0.1.1",
   "repository": "giuseppeg/react-layers-manager",
-  "main": "./index.js",
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.es.js",
   "files": [
     "index.js",
     "lib",
@@ -22,6 +23,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -32,6 +34,6 @@
     "react": ">= 16.3.x"
   },
   "scripts": {
-    "prepublish": "rollup -c"
+    "prepublish": "rm -rf lib && rollup -c"
   }
 }

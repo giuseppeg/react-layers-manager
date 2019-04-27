@@ -1,10 +1,10 @@
 import babel from 'rollup-plugin-babel'
 
-export default {
+export default ['cjs', 'es'].map(format => ({
   input: './src/index.js',
   output: {
-    file: './lib/index.js',
-    format: 'cjs'
+    file: `./lib/index.${format}.js`,
+    format
   },
   plugins: [
     babel({
@@ -12,4 +12,4 @@ export default {
     })
   ],
   external: ['react', 'react-dom']
-};
+}));
